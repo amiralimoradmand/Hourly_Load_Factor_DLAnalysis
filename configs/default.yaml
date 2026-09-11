@@ -1,0 +1,21 @@
+data:
+  raw_csv: data/raw/Tetuan City power consumption.csv
+  processed_csv: data/processed/load_factor_hourly.csv
+  train_frac: 0.70
+  val_frac: 0.15
+  window: 168
+  horizon: 24
+
+model:
+  model_type: lstm
+  hidden_size: 64
+  num_layers: 2
+  dropout: 0.2
+
+train:
+  batch_size: 64
+  epochs: 100
+  lr: 0.001
+  weight_decay: 0.00001
+  patience: 10
+  seed: 42
